@@ -17,9 +17,15 @@ The project is built in Python Which include API by FastAPI and User Interface b
    ```
 ### How to Use 
 1. For running with command line in terminal: 
+   For input is text and dest_language 
     ```commandline
-    python test_local_translator.py 
+    python test_local_translator.py --text 'your input text' --dest_language 'vi'
     ```
+   For input is json file 
+    ```commandline
+    python test_local_translator.py --json 'your json file' 
+    ```
+   Noted: You can set your api key with argument --openai_api_key and set the model name with --openai_model or you can use api key and model with my default.
 2. For running API: 
    ```commandline
    uvicorn api:app --reload
